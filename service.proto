@@ -1,0 +1,17 @@
+syntax = "proto3";
+
+package test;
+
+service Chat{
+  rpc SayHi(HiRequest) returns (HiResponse); 
+}
+
+message HiRequest{
+  string user = 1;
+  string request = 2;
+}
+
+message HiResponse{
+  string message = 3;
+}
+

@@ -1,0 +1,15 @@
+syntax = "proto3";
+
+option go_package = "example.com/grpc/go_servicepb";
+service Multiply{
+    rpc SendValues(RequestValues) returns (ResponseAnswer){}
+}
+
+message RequestValues{
+    int32 value1 = 1;
+    int32 value2 = 2;
+}
+
+message ResponseAnswer{
+    int32 ans = 3;
+}
