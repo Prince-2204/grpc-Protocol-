@@ -1,0 +1,15 @@
+syntax = "proto3";
+
+option go_package = "example.com/grpc/python-go";
+service Chat{
+    rpc SendMessage(GetRequest) returns (GetResponse);
+}
+
+message GetRequest{
+    string id = 1;
+
+}
+
+message GetResponse{
+    string message = 2;
+}
