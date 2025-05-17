@@ -15,7 +15,7 @@ def serve():
     service_pb2_grpc.add_ChatServicer_to_server(Chat(),server)
     server.add_insecure_port("[::]:" + port)
     server.start()
-    print(f"Server started at port {port}")
+    print(f"Server started at port number {port}")
     server.wait_for_termination()
 
 if __name__ == "__main__":
